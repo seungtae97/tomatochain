@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# Tomato Chain Official Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official repository for the **Tomato Chain** website. It is a modern, responsive single-page application built with React and TypeScript, featuring 3D animations and multi-language support.
 
-Currently, two official plugins are available:
+## 🛠 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **Internationalization (i18n)**: [react-i18next](https://react.i18next.com/)
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Clone the repository (or extract the project folder).
+2. Install dependencies:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To start the local development server:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+The application will be available at `http://localhost:5173`.
+
+## 📦 Build & Deployment
+
+To build the project for production:
+
+```bash
+npm run build
+```
+
+The build artifacts will be output to the `dist` directory. You can preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Deployment
+
+This project is optimized for deployment on platforms like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
+
+- **Vercel**: Simply connect your GitHub repository or use the Vercel CLI.
+- **Static Hosting**: Upload the contents of the `dist` folder to any static hosting service.
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/          # Static assets (images, fonts, etc.)
+├── components/      # Reusable UI components
+│   ├── home/        # Components specific to the Home page
+│   ├── layout/      # Layout components (Navbar, Footer, etc.)
+│   └── ui/          # Generic UI components (buttons, cards, etc.)
+├── i18n/            # Internationalization configuration
+├── pages/           # Page components (HomePage, TTCoinPage)
+├── App.tsx          # Main application component with routes
+└── main.tsx         # Application entry point
+```
+
+## ✨ Key Features
+
+- **3D Hero Section**: Interactive particle animation using custom implementation.
+- **Performance Section**: Animated statistics and charts.
+- **Partner & Ecology**: Grid layouts showcasing partners and ecosystem apps.
+- **Multi-language**: Support for Korean, English, Chinese, Japanese, and Vietnamese.
+- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
+
+## 📝 License
+
+This project is private and proprietary to Tomato Chain.

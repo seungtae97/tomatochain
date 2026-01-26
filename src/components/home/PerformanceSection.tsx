@@ -86,7 +86,7 @@ const PerformanceSection = () => {
         { name: '고팍스', url: 'https://www.gopax.co.kr/exchange/ttc-krw', color: 'bg-blue-600' },
         { name: '포블', url: 'https://www.foblgate.com/trade?pairName=TTC/USDT', color: 'bg-purple-600' },
         { name: 'MEXC', url: 'https://www.mexc.com/exchange/ttcoin_USDT', color: 'bg-green-500' },
-        { name: 'LBank', url: 'https://www.lbank.info/exchange/ttc/usdt', color: 'bg-yellow-600' },
+        { name: 'LBank', url: 'https://www.lbank.info/trade/ttc_usdt', color: 'bg-yellow-600' },
     ];
 
     // 한국어 숫자 포맷 (억, 만 단위)

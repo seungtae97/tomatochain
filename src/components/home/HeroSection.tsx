@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../i18n/LanguageContext';
 import heroVideo from '../../assets/hero_vid.mp4';
@@ -203,24 +204,17 @@ const HeroSection = () => {
                 <span className="inline-block py-2 px-4 rounded-full bg-primary/20 border border-primary text-primary text-sm font-semibold tracking-wide mb-6 backdrop-blur-sm">
                     {t('hero.badge')}
                 </span>
-                <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight flex flex-col items-center">
                     <span className="text-primary">{t('hero.title')}</span>
+                    <span className="text-2xl md:text-4xl text-white mt-2 font-medium">(ttchain 3.0)</span>
                 </h2>
                 <p className="text-base md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
                     {t('hero.description')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(168,33,39,0.5)]">
+                    <Link to="/ttcoin" className="px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(168,33,39,0.5)]">
                         {t('hero.cta.start')}
-                    </button>
-                    <a
-                        href="https://ttcoin.io/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-lg font-bold text-lg backdrop-blur-sm transition-all text-center flex items-center justify-center cursor-pointer"
-                    >
-                        {t('hero.cta.whitepaper')}
-                    </a>
+                    </Link>
                 </div>
             </motion.div>
 

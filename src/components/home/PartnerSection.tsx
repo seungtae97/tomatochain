@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 const partners = [
-    { name: '통통메신저', icon: MessageCircle, color: 'from-blue-500 to-cyan-500' },
-    { name: '통통지갑', icon: Wallet, color: 'from-purple-500 to-indigo-500' },
-    { name: '통통몰', icon: ShoppingBag, color: 'from-pink-500 to-rose-500' },
-    { name: '뉴스토마토', icon: Newspaper, color: 'from-red-500 to-rose-500' },
-    { name: '증권통', icon: TrendingUp, color: 'from-indigo-500 to-blue-500' },
-    { name: '합격통', icon: GraduationCap, color: 'from-yellow-500 to-orange-500' },
-    { name: '투자클럽', icon: Briefcase, color: 'from-slate-500 to-gray-600' },
-    { name: '티켓통', icon: Ticket, color: 'from-fuchsia-500 to-pink-500' },
+    { name: '통통메신저', icon: MessageCircle, color: 'from-blue-500 to-cyan-500', url: 'https://tongtong.chat/maintongtongbrand/' },
+    { name: '통통지갑', icon: Wallet, color: 'from-purple-500 to-indigo-500', url: 'https://ttwallet.io/' },
+    { name: '통통몰', icon: ShoppingBag, color: 'from-pink-500 to-rose-500', url: 'https://www.tongtongmall.net/main' },
+    { name: '뉴스토마토', icon: Newspaper, color: 'from-red-500 to-rose-500', url: 'https://www.newstomato.com/' },
+    { name: '증권통', icon: TrendingUp, color: 'from-indigo-500 to-blue-500', url: 'https://www.tomato.co.kr/' },
+    { name: '토마토패스', icon: GraduationCap, color: 'from-yellow-500 to-orange-500', url: 'https://www.tomatopass.com/main.do' },
+    { name: '투자클럽', icon: Briefcase, color: 'from-slate-500 to-gray-600', url: 'https://www.etomato.com/home/' },
+    { name: '티켓통', icon: Ticket, color: 'from-fuchsia-500 to-pink-500', url: 'https://www.tickettong.net' },
 ];
 
 const socialLinks = [
@@ -67,11 +67,13 @@ const PartnerSection = () => {
                 </div>
 
                 {/* Partner Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
                     {partners.map((partner, index) => (
                         <motion.a
                             key={index}
-                            href="#"
+                            href={partner.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}

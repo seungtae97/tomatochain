@@ -31,11 +31,6 @@ const Footer = () => {
                                     {t('footer.browser')}
                                 </a>
                             </li>
-                            <li>
-                                <a href="#" className="text-base text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary">
-                                    DApps
-                                </a>
-                            </li>
                         </ul>
                     </div>
 

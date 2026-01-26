@@ -1,4 +1,4 @@
-import { Coins, Gift, Tag, CircleDollarSign, ExternalLink, FileText, Globe } from 'lucide-react';
+import { Coins, Gift, Tag, CircleDollarSign, ExternalLink, FileText, Globe, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../i18n/LanguageContext';
 
@@ -119,23 +119,14 @@ const TokenSection = () => {
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <a
-                                href="https://ttcoin.io"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                href="/TongtongCoin_WhitePaper_Korean_v3.0.pdf"
+                                download="TongtongCoin_WhitePaper_Korean_v3.0.pdf"
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 dark:bg-white hover:bg-gray-700 dark:hover:bg-gray-100 text-white dark:text-gray-900 rounded-lg font-bold transition-all"
                             >
                                 {t('tokens.whitepaper.ko')}
-                                <ExternalLink size={18} />
+                                <Download size={18} />
                             </a>
-                            <a
-                                href="https://ttcoin.io"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-800 dark:border-white text-gray-800 dark:text-white hover:bg-gray-800 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 rounded-lg font-bold transition-all"
-                            >
-                                {t('tokens.whitepaper.en')}
-                                <ExternalLink size={18} />
-                            </a>
+
                         </div>
                     </motion.div>
                 </div>
