@@ -25,22 +25,22 @@ const Navbar = () => {
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
-        const element = document.querySelector(href);
-        if (element) {
-            // headerOffset calculation handles the fixed navbar
-            // If using scroll-padding-top in CSS, standard scrollIntoView is enough, 
-            // but manual calculation ensures it works even if CSS fails or for more control.
-            // Let's use the explicit scroll method for best cross-browser behavior with offset.
-            const headerOffset = 80;
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
-        }
         setIsOpen(false);
+
+        // Add a small delay to ensure the menu closing animation doesn't interfere with scroll
+        setTimeout(() => {
+            const element = document.querySelector(href);
+            if (element) {
+                const headerOffset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }, 100);
     };
 
     const navLinks = [
