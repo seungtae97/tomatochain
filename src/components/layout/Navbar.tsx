@@ -23,6 +23,26 @@ const Navbar = () => {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
 
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        const element = document.querySelector(href);
+        if (element) {
+            // headerOffset calculation handles the fixed navbar
+            // If using scroll-padding-top in CSS, standard scrollIntoView is enough, 
+            // but manual calculation ensures it works even if CSS fails or for more control.
+            // Let's use the explicit scroll method for best cross-browser behavior with offset.
+            const headerOffset = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+        setIsOpen(false);
+    };
+
     const navLinks = [
         { name: t('nav.home'), href: '/', isRoute: true },
         ...(isHomePage ? [
@@ -79,6 +99,7 @@ const Navbar = () => {
                                     <a
                                         key={link.name}
                                         href={link.href}
+                                        onClick={(e) => handleScroll(e, link.href)}
                                         className="text-gray-900 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap"
                                     >
                                         {link.name}
@@ -147,7 +168,7 @@ const Navbar = () => {
                                         <a
                                             key={link.name}
                                             href={link.href}
-                                            onClick={() => setIsOpen(false)}
+                                            onClick={(e) => handleScroll(e, link.href)}
                                             className="text-gray-900 dark:text-gray-300 hover:text-primary dark:hover:text-primary block px-3 py-2 rounded-md text-base font-medium"
                                         >
                                             {link.name}

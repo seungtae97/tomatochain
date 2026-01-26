@@ -22,7 +22,7 @@ const Footer = () => {
                         </h3>
                         <ul className="mt-4 space-y-4">
                             <li>
-                                <a href="#" className="text-base text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary">
+                                <a href="https://ttwallet.io/" target="_blank" rel="noopener noreferrer" className="text-base text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary">
                                     {t('footer.wallet')}
                                 </a>
                             </li>

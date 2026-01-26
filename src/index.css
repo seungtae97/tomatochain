@@ -13,6 +13,11 @@
   --text-color: #ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed header */
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);

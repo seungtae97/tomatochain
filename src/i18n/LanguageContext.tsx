@@ -78,7 +78,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Footer
         'footer.desc': '초고속 처리, 초저비용, 무한 확장성을 제공하는 차세대 블록체인 인프라',
         'footer.ecosystem': '생태계',
-        'footer.wallet': '지갑',
+        'footer.wallet': '토마토월렛',
         'footer.browser': '브라우저',
         'footer.community': '커뮤니티',
 
@@ -189,7 +189,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Footer
         'footer.desc': 'Next-generation blockchain infrastructure with ultra-fast processing, low costs, and infinite scalability',
         'footer.ecosystem': 'Ecosystem',
-        'footer.wallet': 'Wallet',
+        'footer.wallet': 'Tomato Wallet',
         'footer.browser': 'Browser',
         'footer.community': 'Community',
 
@@ -300,7 +300,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Footer
         'footer.desc': '提供超快处理、低成本和无限扩展性的下一代区块链基础设施',
         'footer.ecosystem': '生态系统',
-        'footer.wallet': '钱包',
+        'footer.wallet': '番茄钱包',
         'footer.browser': '浏览器',
         'footer.community': '社区',
 
@@ -411,7 +411,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Footer
         'footer.desc': '超高速処理、低コスト、無限のスケーラビリティを提供する次世代ブロックチェーンインフラ',
         'footer.ecosystem': 'エコシステム',
-        'footer.wallet': 'ウォレット',
+        'footer.wallet': 'トマトウォレット',
         'footer.browser': 'ブラウザ',
         'footer.community': 'コミュニティ',
 
@@ -522,7 +522,7 @@ const translations: Record<Language, Record<string, string>> = {
         // Footer
         'footer.desc': 'Cơ sở hạ tầng blockchain thế hệ mới với xử lý siêu nhanh, chi phí thấp và khả năng mở rộng vô hạn',
         'footer.ecosystem': 'Hệ sinh thái',
-        'footer.wallet': 'Ví',
+        'footer.wallet': 'Ví Tomato',
         'footer.browser': 'Trình duyệt',
         'footer.community': 'Cộng đồng',
 
