@@ -8,7 +8,7 @@ import { LanguageProvider } from './i18n/LanguageContext.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/tomatochain">
       <LanguageProvider>
         <ThemeProvider>
           <App />
