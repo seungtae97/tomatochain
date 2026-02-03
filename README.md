@@ -4,12 +4,13 @@ This is the official repository for the **Tomato Chain** website. It is a modern
 
 ## 🛠 Tech Stack
 
-- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Framework**: [React 18](https://react.dev/) + [Vite](https://vitejs.dev/) (Downgraded for stability and security)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Animation**: [Framer Motion](https://www.framer.com/motion/)
 - **Routing**: [React Router](https://reactrouter.com/)
-- **Internationalization (i18n)**: [react-i18next](https://react.i18next.com/)
+- **Internationalization (i18n)**: [Custom Context API](src/i18n/LanguageContext.tsx)
+- **Security**: React 18 LTS for production stability and avoiding recent RCE vulnerabilities in early React 19 versions.
 
 ## 🚀 Getting Started
 
