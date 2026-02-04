@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { LanguageSelector } from '../theme/LanguageSelector';
+import { ThemeToggle } from '../theme/ThemeToggle';
 import { useLanguage } from '../../i18n/LanguageContext';
 import logo from '../../assets/coin_logo.png';
 
@@ -111,6 +112,7 @@ const Navbar = () => {
                     {/* Right side icons */}
                     <div className="hidden md:flex items-center gap-2">
                         <LanguageSelector />
+                        <ThemeToggle />
                         <Link
                             to="/ttcoin"
                             className="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-full text-sm font-medium transition-colors shadow-lg hover:shadow-primary/50"
@@ -130,6 +132,7 @@ const Navbar = () => {
                     {/* Mobile menu button */}
                     <div className="md:hidden flex items-center gap-2">
                         <LanguageSelector />
+                        <ThemeToggle />
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-gray-700 dark:text-gray-300 hover:text-primary focus:outline-none"
